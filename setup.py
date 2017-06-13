@@ -6,7 +6,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'flask',
-        'twilio==5.6.0',
+        'twilio',
         'google-api-python-client',
         'gspread',
     ],
