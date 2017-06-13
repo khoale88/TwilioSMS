@@ -1,1 +1,1 @@
-# Simple SMS service using twilio, and python-flask
+# Simple SMS service using google sheet, twilio, and python-flask
