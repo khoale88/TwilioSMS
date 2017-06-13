@@ -1,3 +1,0 @@
-flask
-twilio==5.6.0
-google-api-python-client

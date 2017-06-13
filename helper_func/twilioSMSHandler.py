@@ -25,9 +25,9 @@ def send_sms_by_users(users, msg):
                 unsend_list.append(user[USRR.USER_FN])
                 continue
             user_msg = msg.replace("_user_", user[USRR.USER_FN])
-            twilio_client.sms.messages.create(to=user[USRR.USER_PHONE],
-                                              from_=twilio_number,
-                                              body=user_msg)
+            twilio_client.messages.create(to=user[USRR.USER_PHONE],
+                                          from_=twilio_number,
+                                          body=user_msg)
             send_list.append(user[USRR.USER_FN])
         except Exception as e:
             print(e)

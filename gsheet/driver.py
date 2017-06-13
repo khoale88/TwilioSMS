@@ -106,7 +106,7 @@ def opt_parm(filt):
     if not isinstance(filt, dict):
         parm = filt
         return EQ, parm
-    key = filt.keys()[0]
+    key = list(filt)[0]
     nestedkey, parm = opt_parm(filt[key])
     if nestedkey == EQ and key == ISIN:
         pass

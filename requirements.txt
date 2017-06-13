@@ -1,4 +1,4 @@
 flask
-twilio==5.6.0
+twilio
 google-api-python-client
 gspread
