@@ -1,5 +1,6 @@
 from __future__ import print_function
-from oauth2client.service_account import ServiceAccountCredentials
+from oauth2client.service_account import ServiceAccountCredentials 
+from twilio_app import TESTING
 import gspread
 from gsheet import driver as GSD
 
@@ -21,8 +22,11 @@ USER_FITBIT = 'fitbit'
 USER_BOOL_TRUE = 'TRUE'
 USER_BOOL_FALSE = 'FALSE'
 
-SPREADSHEET_ID = '1XiNoDc2-hU8i8_GAEEUsqGmth2rF0mPVg1js_JySaAY'
-# SPREADSHEET_ID = '1H7uRrL0-K9pHq3NfJ4OmC3Qrck3AjTrigF33lKqMSuA'
+if TESTING:
+    SPREADSHEET_ID = '1XiNoDc2-hU8i8_GAEEUsqGmth2rF0mPVg1js_JySaAY'
+else:
+    SPREADSHEET_ID = '1H7uRrL0-K9pHq3NfJ4OmC3Qrck3AjTrigF33lKqMSuA'
+
 USER_WORKSHEET = 'Users'
 
 def get_users(filt=None, proj=None):
@@ -60,8 +64,5 @@ def update_users(filt=None, updt=None):
                     updt_count += 1
                 except Exception as e:
                     print(e)
+                    continue
     return updt_count
-
-if __name__ == '__main__':
-    print(get_users())
-

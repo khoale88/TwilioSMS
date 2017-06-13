@@ -1,3 +1,4 @@
 twilioCred.json
 *.pyc
 localfile/*.*
+.vscode

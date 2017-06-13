@@ -1,5 +1,5 @@
 #A simple Flask app container
-FROM python:2.7
+FROM python:3.5
 MAINTAINER Khoa Le "lenguyenkhoa1988@gmail.com"
 
 #Place app in container
