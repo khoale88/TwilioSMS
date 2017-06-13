@@ -1,2 +1,3 @@
 twilioCred.json
 *.pyc
+localfile/*.*
